@@ -70,13 +70,27 @@ export function CardProvider({ children }) {
     }
   };
 
+  const nextDog = () => {
+    const nextDogIndex = filteredData.findIndex((dog) => dog.id === selectedBreedsId) + 1;
+    if (nextDogIndex < filteredData.length) {
+      setSelectedBreedsId(filteredData[nextDogIndex].id);
+    }
+  };
+
+  const previousDog = () => {
+    const previousDogIndex = filteredData.findIndex((dog) => dog.id === selectedBreedsId) - 1;
+    if (previousDogIndex >= 0) {
+      setSelectedBreedsId(filteredData[previousDogIndex].id);
+    }
+  }
+
   if (loading) {
     return <h1>Carregando...</h1>;
   }
 
   return (
     <CardContext.Provider
-      value={{ dogData: filteredData, selectedBreedsId, cardRefs, showDetails, showAllCards, onSearch }}
+      value={{ dogData: filteredData, selectedBreedsId, cardRefs, showDetails, showAllCards, onSearch, nextDog, previousDog }}
     >
       {children}
     </CardContext.Provider>

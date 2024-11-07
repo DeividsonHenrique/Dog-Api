@@ -3,7 +3,7 @@ import { Card, DivImg, DivInfo, VerMais, DivDetalhes, InfoDetalhes, ImgDetalhes 
 import { useCards } from "../../CreateContext.jsx";
 
 function Cards() {
-  const { dogData, selectedBreedsId, cardRefs, showDetails, showAllCards } = useCards();
+  const { dogData, selectedBreedsId, cardRefs, showDetails, showAllCards, nextDog, previousDog } = useCards();
 
 
   
@@ -34,7 +34,11 @@ function Cards() {
                 <p><strong>Peso:</strong> {dog.weight?.metric || "Desconhecido"} kg</p>
                 <p><strong>Expectativa de vida:</strong> {dog.life_span || "Desconhecido"}</p>
                 <p><strong>Origem:</strong> {dog.origin || "Desconhecido"}</p>
-                <button onClick={showAllCards}>Voltar</button>
+                <div>
+                  <button onClick={showAllCards}>Voltar</button>
+                  <button onClick={nextDog}>Proximo</button>
+                  <button onClick={previousDog}>Anterior</button>
+                </div>
               </InfoDetalhes>
               
             </DivDetalhes>
