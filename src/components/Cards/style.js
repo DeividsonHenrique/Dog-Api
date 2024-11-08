@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IoMdCloseCircle } from "react-icons/io";
 
 export const Card = styled.div`
   position: relative;
@@ -39,8 +40,8 @@ export const DivInfo = styled.div`
   h6 {
     font-size: 18px;
     font-weight: 600;
-    margin: 5px 0px; 
-    text-align: center;  
+    margin: 5px 0px;
+    text-align: center;
   }
 
   span {
@@ -71,17 +72,12 @@ export const VerMais = styled.input`
     background-color: #0d6f64;
     color: #f2f2f2;
   }
-`;	
-
-
-
-
-
-
+`;
 
 // parte de detalhes
 
 export const DivDetalhes = styled.div`
+  position: relative;
   margin-top: 50px;
   width: 80%;
   height: 500px;
@@ -92,7 +88,27 @@ export const DivDetalhes = styled.div`
   overflow: hidden;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-`
+`;
+
+export const CloseBtn = styled(IoMdCloseCircle)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  color: #05705a;
+  z-index: 10000;
+  overflow: auto;
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #0d6f64;
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.2),
+      0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+`;
 
 export const InfoDetalhes = styled.div`
   background-color: #fff;
@@ -105,12 +121,11 @@ export const InfoDetalhes = styled.div`
   flex-direction: column;
   overflow: hidden;
 
-
   h6 {
     font-size: 18px;
     font-weight: 600;
-    margin: 30px 0px 30px 0px; 
-    text-align: center;  
+    margin: 30px 0px 30px 0px;
+    text-align: center;
   }
 
   span {
@@ -122,13 +137,20 @@ export const InfoDetalhes = styled.div`
     margin: 0px 10px;
   }
 
-
-  p{
+  p {
     width: 80%;
     text-align: start;
   }
 
-  button{
+  div {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  button {
     margin-top: 20px;
     width: 200px;
     height: 30px;
@@ -147,10 +169,10 @@ export const InfoDetalhes = styled.div`
     }
   }
 
-  strong{
+  strong {
     font-weight: 600;
   }
-`
+`;
 
 export const ImgDetalhes = styled.div`
   width: 50%;
@@ -164,6 +186,4 @@ export const ImgDetalhes = styled.div`
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
- 
-
-`	
+`;

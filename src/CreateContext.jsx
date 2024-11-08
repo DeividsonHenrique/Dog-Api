@@ -9,6 +9,7 @@ export function CardProvider({ children }) {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedBreedsId, setSelectedBreedsId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
   const cardRefs = useRef({});
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export function CardProvider({ children }) {
         Promise.all(breedImagesPromises).then((data) => {
           setDogData(data);
           setFilteredData(data);
-        })
+        });
       })
       .then((breedsWithImages) => {
         setDogData(breedsWithImages);
@@ -58,9 +59,8 @@ export function CardProvider({ children }) {
     }, 0);
   };
 
-
   const onSearch = (query) => {
-    if(query === "") {
+    if (query === "") {
       setFilteredData(dogData);
     } else {
       const filteredSearch = dogData.filter((dog) =>
@@ -71,18 +71,38 @@ export function CardProvider({ children }) {
   };
 
   const nextDog = () => {
-    const nextDogIndex = filteredData.findIndex((dog) => dog.id === selectedBreedsId) + 1;
+    const nextDogIndex =
+      filteredData.findIndex((dog) => dog.id === selectedBreedsId) + 1;
     if (nextDogIndex < filteredData.length) {
       setSelectedBreedsId(filteredData[nextDogIndex].id);
     }
   };
 
   const previousDog = () => {
-    const previousDogIndex = filteredData.findIndex((dog) => dog.id === selectedBreedsId) - 1;
+    const previousDogIndex =
+      filteredData.findIndex((dog) => dog.id === selectedBreedsId) - 1;
     if (previousDogIndex >= 0) {
       setSelectedBreedsId(filteredData[previousDogIndex].id);
     }
-  }
+  };
+
+  const handleSearch = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    if (selectedBreedsId === null) {
+      onSearch(query);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearchQuery("");
+    onSearch("");
+  };
+
+  const CloseAndReturnCleaned = () => {
+    showAllCards();
+    clearSearch();
+  };
 
   if (loading) {
     return <h1>Carregando...</h1>;
@@ -90,7 +110,20 @@ export function CardProvider({ children }) {
 
   return (
     <CardContext.Provider
-      value={{ dogData: filteredData, selectedBreedsId, cardRefs, showDetails, showAllCards, onSearch, nextDog, previousDog }}
+      value={{
+        dogData: filteredData,
+        selectedBreedsId,
+        cardRefs,
+        showDetails,
+        showAllCards,
+        onSearch,
+        nextDog,
+        previousDog,
+        clearSearch,
+        handleSearch,
+        searchQuery,
+        CloseAndReturnCleaned,
+      }}
     >
       {children}
     </CardContext.Provider>

@@ -6,10 +6,7 @@ import Main from "./components/Main/Main.jsx";
 import GoToTop from "./components/GoToTop.jsx";
 import Search from "./components/search/Search.jsx";
 
-
 function App() {
-
-
   return (
     <>
       <GlobalStyle />

@@ -1,22 +1,10 @@
 import { SearchContainer } from "./style";
 import { FaSearch } from "react-icons/fa";
 import { useCards } from "../../CreateContext.jsx";
-import { useState } from "react";
 
 function Search() {
-  const { onSearch } = useCards();
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = (event) => {
-    const query = event.target.value;
-    setSearchQuery(query);
-    onSearch(query);
-  };
-
-  const clearSearch = () => {
-    setSearchQuery('');
-    onSearch('');
-  };
+  const { selectedBreedsId, clearSearch, handleSearch, searchQuery } =
+    useCards();
 
   return (
     <SearchContainer>
@@ -25,7 +13,13 @@ function Search() {
         cachorros com a Dogs API aqui!
       </span>
       <div>
-        <input type="text" placeholder="Buscar por raça" value={searchQuery} onChange={handleSearch} />
+        <input
+          type="text"
+          placeholder="Buscar por raça"
+          value={searchQuery}
+          onChange={handleSearch}
+          disabled={selectedBreedsId !== null}
+        />
         <FaSearch className="icon" onClick={clearSearch} />
       </div>
     </SearchContainer>

@@ -1,10 +1,13 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { HeaderContainer, DivLogo, DivLinks } from "./style";
+import { useCards } from "../../CreateContext.jsx";
 
 function Header() {
+  const { showAllCards } = useCards();
+
   return (
     <HeaderContainer>
-      <DivLogo>
+      <DivLogo onClick={showAllCards}>
         <img src="/Images/logo.jpg" alt="logo" />
         <h2>Logo</h2>
       </DivLogo>
