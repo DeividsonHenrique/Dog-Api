@@ -26,4 +26,9 @@ export const BannerImg = styled.div`
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
+
+
+  @media (max-width: 768px) {
+    background-position: 50% 30%;
+  }
 `;

@@ -42,4 +42,21 @@ export const SearchContainer = styled.div`
     right: 10px;
     cursor: pointer;
   }
+
+
+  @media (max-width: 768px) {
+    width: 90%;
+
+    span {
+      font-size: 20px;
+    }
+
+    input {
+      font-size: 15px;
+    }
+
+    .icon {
+      font-size: 20px;
+    }
+  }
 `;

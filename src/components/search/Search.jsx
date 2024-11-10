@@ -1,12 +1,14 @@
 import { SearchContainer } from "./style";
 import { FaSearch } from "react-icons/fa";
 import { useCards } from "../../CreateContext.jsx";
+import { Fade } from "react-awesome-reveal";
 
 function Search() {
   const { selectedBreedsId, clearSearch, handleSearch, searchQuery } =
     useCards();
 
   return (
+    <Fade triggerOnce>
     <SearchContainer>
       <span>
         Encontre todas os tipos de informações, imagens e raças completas sobre
@@ -23,6 +25,7 @@ function Search() {
         <FaSearch className="icon" onClick={clearSearch} />
       </div>
     </SearchContainer>
+    </Fade>
   );
 }
 
