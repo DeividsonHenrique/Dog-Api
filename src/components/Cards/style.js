@@ -13,6 +13,12 @@ export const Card = styled.div`
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   margin: 10px;
   overflow: hidden;
+
+
+  @media (max-width: 500px) {
+    width: 280px;
+    height: 380px;
+  }
 `;
 
 export const DivImg = styled.div`
@@ -76,7 +82,9 @@ export const VerMais = styled.input`
 
 // parte de detalhes
 
+
 export const DivDetalhes = styled.div`
+  max-width: 1920px;
   position: relative;
   margin-top: 50px;
   width: 80%;
@@ -88,6 +96,12 @@ export const DivDetalhes = styled.div`
   overflow: hidden;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+
+
+  @media (max-width: 1100px) {
+    height: 400px;
+    width: 90%;
+  }
 `;
 
 export const CloseBtn = styled(IoMdCloseCircle)`
@@ -107,6 +121,12 @@ export const CloseBtn = styled(IoMdCloseCircle)`
     color: #0d6f64;
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.2),
       0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+
+  @media (max-width: 1100px) {
+    height: 40px;
+    width: 40px;
   }
 `;
 
@@ -171,6 +191,40 @@ export const InfoDetalhes = styled.div`
 
   strong {
     font-weight: 600;
+  }
+
+
+
+  @media (max-width: 1500px) {
+    button {
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    button {
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    height: 400px;
+
+    h6{
+      font-size: 16px;
+      margin: 20px 0px 0px 0px;
+    }
+
+    span {
+      font-size: 12px;
+      margin: 0px 0px;
+    }
+
+
+    button {
+      margin-top: 10px;
+      width: 100px;
+    }
   }
 `;
 

@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { Loading } from "./style"
 
 const CardContext = createContext();
 
@@ -9,10 +10,13 @@ export function CardProvider({ children }) {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedBreedsId, setSelectedBreedsId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showLoading, setShowLoading] = useState(false);    
   const [searchQuery, setSearchQuery] = useState("");
   const cardRefs = useRef({});
 
   useEffect(() => {
+    const timer = setTimeout(() => setShowLoading(true), 1000);
+
     fetch("https://api.thedogapi.com/v1/breeds")
       .then((response) => response.json())
       .then((breedsData) => {
@@ -40,6 +44,8 @@ export function CardProvider({ children }) {
         console.error("Erro ao buscar dados dos cachorros:", error);
         setLoading(false);
       });
+
+      return () => clearTimeout(timer);
   }, []);
 
   const showDetails = (id) => {
@@ -104,8 +110,13 @@ export function CardProvider({ children }) {
     clearSearch();
   };
 
-  if (loading) {
-    return <h1>Carregando...</h1>;
+  if (loading && showLoading) {
+    return (
+       <Loading>
+      <div></div>
+      <div></div>
+      </Loading>
+    );
   }
 
   return (

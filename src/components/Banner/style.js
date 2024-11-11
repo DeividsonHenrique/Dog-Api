@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
   height: 420px;
+  z-index: -10;
 `;
 
 export const BannerImg = styled.div`
@@ -30,5 +31,10 @@ export const BannerImg = styled.div`
 
   @media (max-width: 768px) {
     background-position: 50% 30%;
+  }
+
+  @media (max-width: 500px) {
+    height: 400px;
+    
   }
 `;

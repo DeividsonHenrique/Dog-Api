@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   max-width: 1920px;
   width: 100%;
   display: flex;
@@ -10,7 +10,6 @@ export const HeaderContainer = styled.div`
   padding: 0 20px;
   height: 80px;
   background-color: transparent;
-  z-index: 10;
 `;
 
 export const DivLogo = styled.div`
@@ -19,6 +18,7 @@ export const DivLogo = styled.div`
   height: 80px;
   cursor: pointer;
   transition: all 0.3s;
+  
 
   img {
     width: 50px;
@@ -52,14 +52,7 @@ export const DivLogo = styled.div`
   }
 
 
-  @media (max-width: 500px) {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 100%;
-    height: 50px;
-    padding: 0 10px;
-  }
+ 
 `;
 
 export const DivLinks = styled.div`

@@ -5,8 +5,8 @@ import Search from "../search/Search";
 function Banner() {
   return (
     <>
-      <Search />
       <BannerContainer>
+        <Search />
         <BannerImg />
       </BannerContainer>
     </>

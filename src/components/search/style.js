@@ -59,4 +59,21 @@ export const SearchContainer = styled.div`
       font-size: 20px;
     }
   }
+
+  @media (max-width: 500px) {
+    width: 80%;
+
+    span {
+      font-size: 15px;
+      text-align: center;
+    }
+
+    input {
+      font-size: 10px;
+    }
+
+    .icon {
+      font-size: 15px;
+    }
+  }
 `;
