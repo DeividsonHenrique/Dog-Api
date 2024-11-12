@@ -102,6 +102,11 @@ export const DivDetalhes = styled.div`
     height: 400px;
     width: 90%;
   }
+
+  @media (max-width: 769px) {
+    height: 350px;
+    width: 90%;
+  }
 `;
 
 export const CloseBtn = styled(IoMdCloseCircle)`
@@ -196,6 +201,7 @@ export const InfoDetalhes = styled.div`
 
 
   @media (max-width: 1500px) {
+    height: 500px;
     button {
       width: 150px;
     }
@@ -220,11 +226,46 @@ export const InfoDetalhes = styled.div`
       margin: 0px 0px;
     }
 
+    p {
+      font-size: 12px;
+    }
+
 
     button {
       margin-top: 10px;
       width: 100px;
     }
+  }
+
+  @media (max-width: 768px) {
+    height: 350px;
+      h6{
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      button {
+        font-size: 12px;
+        width: 80px;
+      }
+  }
+
+  @media (max-width: 630px) {
+    height: 350px;
+
+
+
+    button {
+        font-size: 10px;
+        width: 60px;
+      }
   }
 `;
 
