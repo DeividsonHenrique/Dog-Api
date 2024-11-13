@@ -107,6 +107,11 @@ export const DivDetalhes = styled.div`
     height: 350px;
     width: 90%;
   }
+
+  @media (max-width: 460px) {
+    height: 500px;
+    flex-direction: column;
+  }
 `;
 
 export const CloseBtn = styled(IoMdCloseCircle)`
