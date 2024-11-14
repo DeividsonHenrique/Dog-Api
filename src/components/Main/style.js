@@ -12,7 +12,6 @@ export const MainContainer = styled.div`
   min-height: 100vh;
   overflow-y: auto;
 
-
   @media (max-width: 500px) {
     padding-top: 0px;
   }

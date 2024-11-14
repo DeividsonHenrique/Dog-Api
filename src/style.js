@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 
-
 export const Loading = styled.div`
   display: flex;
   align-items: center;
@@ -27,8 +26,7 @@ export const Loading = styled.div`
   color: red;
   flex-direction: column;
 
-
-  div{
+  div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,22 +34,22 @@ export const Loading = styled.div`
     width: 60px;
     background-color: aqua;
     position: relative;
-    
-    &:first-child{
+
+    &:first-child {
       color: #181818;
-      position: absolute; 
+      position: absolute;
       top: 45%;
       transform: translateX(-48.2%);
-      animation: first .8s linear infinite;
+      animation: first 0.8s linear infinite;
       border-radius: 10px;
     }
 
-    &:last-child{
+    &:last-child {
       color: #181818;
-      position: absolute; 
+      position: absolute;
       bottom: 41.5%;
       transform: translateX(48.5%);
-      animation: last .8s linear infinite;
+      animation: last 0.8s linear infinite;
       border-radius: 10px;
     }
 
@@ -87,6 +85,13 @@ export const Loading = styled.div`
         right: 48.5%;
         transform: translateX(48.5%);
       }
+    }
+  }
+
+  @media (max-width: 500px) {
+    div {
+      height: 40px;
+      width: 40px;
     }
   }
 `;

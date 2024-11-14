@@ -9,22 +9,22 @@ function Search() {
 
   return (
     <Fade triggerOnce>
-    <SearchContainer>
-      <span>
-        Encontre todas os tipos de informações, imagens e raças completas sobre
-        cachorros com a Dogs API aqui!
-      </span>
-      <div>
-        <input
-          type="text"
-          placeholder="Buscar por raça"
-          value={searchQuery}
-          onChange={handleSearch}
-          disabled={selectedBreedsId !== null}
-        />
-        <FaSearch className="icon" onClick={clearSearch} />
-      </div>
-    </SearchContainer>
+      <SearchContainer>
+        <span>
+          Encontre todas os tipos de informações, imagens e raças completas
+          sobre cachorros com a Dogs API aqui!
+        </span>
+        <div>
+          <input
+            type="text"
+            placeholder="Buscar por raça"
+            value={searchQuery}
+            onChange={handleSearch}
+            disabled={selectedBreedsId !== null}
+          />
+          <FaSearch className="icon" onClick={clearSearch} />
+        </div>
+      </SearchContainer>
     </Fade>
   );
 }

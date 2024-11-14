@@ -14,7 +14,6 @@ export const Card = styled.div`
   margin: 10px;
   overflow: hidden;
 
-
   @media (max-width: 500px) {
     width: 280px;
     height: 380px;
@@ -24,7 +23,7 @@ export const Card = styled.div`
 export const DivImg = styled.div`
   height: 250px;
   width: 100%;
-  background-color: red;
+  background-color: lightgray;
   overflow: hidden;
   background-image: url(${(props) => props.imageUrl});
   background-size: cover;
@@ -82,7 +81,6 @@ export const VerMais = styled.input`
 
 // parte de detalhes
 
-
 export const DivDetalhes = styled.div`
   max-width: 1920px;
   position: relative;
@@ -97,7 +95,6 @@ export const DivDetalhes = styled.div`
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 
-
   @media (max-width: 1100px) {
     height: 400px;
     width: 90%;
@@ -109,8 +106,9 @@ export const DivDetalhes = styled.div`
   }
 
   @media (max-width: 460px) {
-    height: 500px;
+    height: 600px;
     flex-direction: column;
+    width: 90%;
   }
 `;
 
@@ -133,10 +131,18 @@ export const CloseBtn = styled(IoMdCloseCircle)`
       0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
 
-
   @media (max-width: 1100px) {
     height: 40px;
     width: 40px;
+  }
+
+  @media (max-width: 460px) {
+    height: 30px;
+    width: 30px;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    z-index: 1;
   }
 `;
 
@@ -203,8 +209,6 @@ export const InfoDetalhes = styled.div`
     font-weight: 600;
   }
 
-
-
   @media (max-width: 1500px) {
     height: 500px;
     button {
@@ -221,7 +225,7 @@ export const InfoDetalhes = styled.div`
   @media (max-width: 1100px) {
     height: 400px;
 
-    h6{
+    h6 {
       font-size: 16px;
       margin: 20px 0px 0px 0px;
     }
@@ -235,7 +239,6 @@ export const InfoDetalhes = styled.div`
       font-size: 12px;
     }
 
-
     button {
       margin-top: 10px;
       width: 100px;
@@ -244,33 +247,62 @@ export const InfoDetalhes = styled.div`
 
   @media (max-width: 768px) {
     height: 350px;
-      h6{
-        font-size: 14px;
-      }
+    h6 {
+      font-size: 14px;
+    }
 
-      span {
-        font-size: 10px;
-      }
+    span {
+      font-size: 10px;
+    }
 
-      p {
-        font-size: 10px;
-      }
+    p {
+      font-size: 10px;
+    }
 
-      button {
-        font-size: 12px;
-        width: 80px;
-      }
+    button {
+      font-size: 12px;
+      width: 80px;
+    }
   }
 
   @media (max-width: 630px) {
     height: 350px;
 
+    button {
+      font-size: 10px;
+      width: 60px;
+    }
+  }
 
+  @media (max-width: 460px) {
+    height: 550px;
+    margin-top: 0px;
+    width: 100%;
+
+    h6 {
+      text-align: center;
+      width: 100%;
+    }
+
+    span {
+      text-align: center;
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      width: 100%;
+    }
+
+    div {
+      width: 100%;
+      justify-content: center;
+    }
 
     button {
-        font-size: 10px;
-        width: 60px;
-      }
+      margin-top: 10px;
+      width: 100px;
+    }
   }
 `;
 
@@ -286,4 +318,8 @@ export const ImgDetalhes = styled.div`
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+
+  @media (max-width: 460px) {
+    width: 100%;
+  }
 `;

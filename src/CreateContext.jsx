@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useRef, useState } from "react";
-import { Loading } from "./style"
+import { Loading } from "./style";
 
 const CardContext = createContext();
 
@@ -17,7 +17,7 @@ export function CardProvider({ children }) {
     fetch("https://api.thedogapi.com/v1/breeds")
       .then((response) => response.json())
       .then((breedsData) => {
-        const selectedBreeds = breedsData.slice(0, 50);
+        const selectedBreeds = breedsData.slice(0, 1000);
         const breedImagesPromises = selectedBreeds.map((breed) =>
           fetch(
             `https://api.thedogapi.com/v1/images/search?breed_id=${breed.id}`
@@ -106,10 +106,12 @@ export function CardProvider({ children }) {
   };
 
   if (loading) {
-    return  <Loading>
-      <div></div>
-      <div></div>
-      </Loading>;
+    return (
+      <Loading>
+        <div></div>
+        <div></div>
+      </Loading>
+    );
   }
 
   return (

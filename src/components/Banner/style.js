@@ -28,13 +28,11 @@ export const BannerImg = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
 
-
   @media (max-width: 768px) {
     background-position: 50% 30%;
   }
 
   @media (max-width: 500px) {
     height: 400px;
-    
   }
 `;

@@ -43,7 +43,6 @@ export const SearchContainer = styled.div`
     cursor: pointer;
   }
 
-
   @media (max-width: 768px) {
     width: 90%;
 

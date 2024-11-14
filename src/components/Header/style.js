@@ -18,7 +18,6 @@ export const DivLogo = styled.div`
   height: 80px;
   cursor: pointer;
   transition: all 0.3s;
-  
 
   img {
     width: 50px;
@@ -50,9 +49,6 @@ export const DivLogo = styled.div`
       font-size: 16px;
     }
   }
-
-
- 
 `;
 
 export const DivLinks = styled.div`
@@ -109,7 +105,6 @@ export const DivLinks = styled.div`
   }
 `;
 
-
 export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
@@ -126,7 +121,7 @@ export const ModalContainer = styled.div`
   .modal-content {
     position: relative;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     width: 300px;
     height: 300px;
     border-radius: 10px;
@@ -134,46 +129,58 @@ export const ModalContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;   
-    overflow: hidden;   
-}
+    justify-content: start;
+    gap: 15px;
+    overflow: hidden;
 
-    input {
-      position:absolute;
-      bottom: 0;
-      width: 300px;
-      height: 40px;
-      border: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
-      background-color: #05705a;
-      font-size: 18px;
-      z-index: 2;
+    span {
+      background-color: #ccc;
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      border-radius: 10px;
       cursor: pointer;
-      color: white;
       transition: all 0.3s;
 
       &:hover {
-        background-color: #0d6f64;
+        background-color: #181818;
         color: #f2f2f2;
       }
     }
+  }
+
+  input {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #05705a;
+    font-size: 18px;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #0d6f64;
+      color: #f2f2f2;
+    }
+  }
 `;
 
-
 export const Menu = styled(GiHamburgerMenu)`
-      color: red;
-      position: fixed;
-      right: 20px;
-      top: 20px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1000;
-      display: none;
+  color: red;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
 
-
-      @media (max-width: 500px) {
-        display: flex;
-      }
-`
-
+  @media (max-width: 500px) {
+    display: flex;
+  }
+`;
