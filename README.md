@@ -15,6 +15,7 @@ O Dog API e uma aplicação web que utiliza a API do Dog API para exibir informa
 
 ## 🚀 Funcionalidades
 
+- **Busca de Raças**: O projeto oferece um campo de busca para facilitar a busca por raças específicas.
 - **Exibição de Cards**: O projeto exibe uma lista de raças de cachorros com imagens e descrições breves.
 - **Detalhes da Raça**: Ao clicar em "Ver mais", o usuário pode visualizar detalhes sobre a raça do cachorro, como tamanho, peso, expectativa de vida, etc.
 - **Rolar até o Card Selecionado**: Quando um card é clicado para exibir seus detalhes, a rolagem da página é ajustada para exibir o card selecionado no centro da tela.
