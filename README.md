@@ -1,5 +1,5 @@
 # Dog API 
-<h2 style="font-size: 10px"> 📅 Data: 15/11/2024</h2>
+📅 Data: 15/11/2024
 
 ## 📝 Sobre o Projeto
 
