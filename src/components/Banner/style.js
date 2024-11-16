@@ -12,7 +12,7 @@ export const BannerImg = styled.div`
   width: 100%;
   padding: 0 20px;
   height: 500px;
-  background: url("/Images/Banner.jpg");
+  background: url("/Images/Banner1.jpg");
   background-size: cover;
   background-position: 100% 30%;
   overflow: hidden;
